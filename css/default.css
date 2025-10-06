@@ -1,0 +1,53 @@
+body {
+    font-family: "Montserrat","Inter", sans-serif;
+    margin: 0;
+    background-color: #fff;
+}
+
+body::selection {
+    background-color: #EE6700;
+    color: #fff;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+a {
+    text-decoration: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+ul, ol {
+    margin: 0;
+    padding-left: 0;
+}
+
+button {
+    cursor: pointer;
+    color: currentColor;
+    padding: 0;
+}
+
+input, select {
+    outline: none;
+    margin: 0 auto;
+}
+
+.link-home-cont {
+  font-size: 20px;
+  margin: 30px;
+}

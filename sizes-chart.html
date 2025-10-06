@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <title>Размерная_сетка</title>
+    <link rel="stylesheet" href="./css/default.css" />
+    <link rel="stylesheet" href="./css/Projects/size-charts/size-charts.css" />
+  </head>
+  <body>
+    <div class="container-text">
+      <h1 class="text-size">Размерная_сетка</h1>
+    </div>
+
+    <ul class="list-size-type">
+      <p class="text-list-size-type">Обери: См або Дюйми</p>
+      <li class="item-size-type">
+        <button class="btn-item-size-type" value="In">In</button>
+      </li>
+      <li class="item-size-type">
+        <button class="btn-item-size-type" value="Cm">Cm</button>
+      </li>
+    </ul>
+    <div class="list-items">
+      <ul class="list-chart">
+        <li>
+          <button value="42" class="btn-item-chart btn-chart-active">42</button>
+        </li>
+        <li>
+          <button value="44" class="btn-item-chart">44</button>
+        </li>
+        <li>
+          <button value="46" class="btn-item-chart">46</button>
+        </li>
+        <li>
+          <button value="48" class="btn-item-chart">48</button>
+        </li>
+        <li>
+          <button value="50" class="btn-item-chart">50</button>
+        </li>
+        <li>
+          <button value="52" class="btn-item-chart">52</button>
+        </li>
+        <li>
+          <button value="54" class="btn-item-chart">54</button>
+        </li>
+        <li>
+          <button value="56" class="btn-item-chart">56</button>
+        </li>
+        <li>
+          <button value="58" class="btn-item-chart">58</button>
+        </li>
+        <li>
+          <button value="60" class="btn-item-chart">60</button>
+        </li>
+        <li>
+          <button value="62" class="btn-item-chart">62</button>
+        </li>
+      </ul>
+      <div class="text-content-container">
+        <p class="size-content-1" id="chestInter"></p>
+        <p class="size-content-2" id="widthinter"></p>
+        <p class="size-content-3" id="heightInter"></p>
+      </div>
+      <div class="image-container">
+        <img
+          src="./images/size-chart/photo-size-chart-example.jpeg"
+          alt="Photo Size Chart"
+          class="img-size-chart"
+        />
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="./js/Projects/size-charts/size-charts.js"
+    ></script>
+  </body>
+</html>

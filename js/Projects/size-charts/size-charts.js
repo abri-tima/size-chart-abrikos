@@ -8,9 +8,10 @@ import {
   widthIntervalDuim,
   heightIntervalDuim,
 } from "./duim-size-chart.js";
+import { sizeMap } from "./size-map.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const buttons = document.querySelectorAll(".btn-item-chart");
+  const listButtons = document.querySelector(".list-chart");
   const buttonsType = document.querySelectorAll(".btn-item-size-type");
   const chestText = document.getElementById("chestInter");
   const widthText = document.getElementById("widthinter");
@@ -18,6 +19,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let currentSizeValue = "42";
   let currentType = "Cm";
+  let buttons = [];
+
+  function renderButtons(dataArray) {
+    listButtons.innerHTML = "";
+    dataArray.forEach(({ size }) => {
+      const li = document.createElement("li");
+      const btn = document.createElement("button");
+      btn.className = "btn-item-chart";
+      btn.value = size;
+      btn.textContent = size;
+      li.appendChild(btn);
+      listButtons.appendChild(li);
+    });
+
+    // обновляем список кнопок
+    buttons = document.querySelectorAll(".btn-item-chart");
+
+    // добавляем обработчики на новые кнопки
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => handleButtonClick(button));
+    });
+
+    console.log(123123);
+  }
 
   let minChest = "";
   let maxChest = "";
@@ -78,8 +103,30 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     button.classList.add("btn-item-size-type-active");
 
+    const prevType = currentType;
     currentType = button.value;
-    updateDisplay(currentType, currentSizeValue);
+
+    let equivalentSize = currentSizeValue;
+
+    if (prevType !== currentType) {
+      equivalentSize = sizeMap[currentSizeValue] || currentSizeValue;
+    }
+
+    if (currentType === "Cm") {
+      renderButtons(chestInterval);
+    } else if (currentType === "In") {
+      renderButtons(chestIntervalDuim);
+    }
+
+    const sameBtn = Array.from(buttons).find(
+      (btn) => btn.value === equivalentSize
+    );
+
+    if (sameBtn) {
+      handleButtonClick(sameBtn);
+    } else if (buttons[0]) {
+      handleButtonClick(buttons[0]);
+    }
   }
 
   // обработчики кнопок

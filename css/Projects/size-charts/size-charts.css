@@ -33,16 +33,21 @@
   border: 2.5px solid #b3b3b3;
   border-radius: 60px;
   padding: 10px 40px;
-  font-size: 30px;
-  transition: border 250ms ease-in-out;
+  font-size: 25px;
+  transition: border 250ms ease-in-out, color 250ms ease-in-out,
+    background-color 250ms ease-in-out;
 }
 
 .btn-item-chart:hover {
-  border: 2.5px solid #080808;
+  border: 2.5px solid #ee6700;
+  background-color: #ee6700;
+  color: #fff;
 }
 
 .btn-chart-active {
-  border: 2.5px solid #080808;
+  border: 2.5px solid #ee6700;
+  background-color: #ee6700;
+  color: #fff;
 }
 
 .size-content {
@@ -67,17 +72,19 @@
   font-size: 20px;
   padding: 10px 30px;
   border-radius: 60px;
-  transition: background-color 250ms ease-in-out;
+  transition: background-color 250ms ease-in-out, border 250ms ease-in-out, color 250ms ease-in-out;
 }
 
 .btn-item-size-type:hover {
-  border: 2.5px solid #080808;
-  background-color: #fff;
+  border: 2.5px solid #ee6700;
+  background-color: #ee6700;
+  color: #fff;
 }
 
 .btn-item-size-type-active {
-  border: 2.5px solid #080808;
-  background-color: lightgreen;
+  border: 2.5px solid #ee6700;
+  background-color: #ee6700;
+  color: #fff;
 }
 
 .image-info {
